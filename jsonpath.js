@@ -4592,10 +4592,6 @@ var grammar = {
                 [ 'Q_STRING',  "$$ = $1" ] ]
     }
 };
-if (fs.readFileSync) {
-  grammar.moduleInclude = fs.readFileSync(require.resolve("../include/module.js"));
-  grammar.actionInclude = fs.readFileSync(require.resolve("../include/action.js"));
-}
 
 module.exports = grammar;
 
